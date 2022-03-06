@@ -11,8 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet private weak var firstText: UITextField!
     @IBOutlet private weak var secondText: UITextField!
-    @IBOutlet weak var calculationSegmented: UISegmentedControl!
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private weak var calculationSegmented: UISegmentedControl!
+    @IBOutlet private weak var resultLabel: UILabel!
 
     @IBAction func changeSelect(_ sender: Any) {
     }
