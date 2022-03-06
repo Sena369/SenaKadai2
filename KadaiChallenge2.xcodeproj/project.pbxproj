@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		082DF278370B472FFDE910C0 /* Pods_KadaiChallenge2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 858663F813E7A98C10692E78 /* Pods_KadaiChallenge2.framework */; };
 		D3CC54BE27D2ECC50077337D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC54BD27D2ECC50077337D /* AppDelegate.swift */; };
 		D3CC54C027D2ECC50077337D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC54BF27D2ECC50077337D /* SceneDelegate.swift */; };
 		D3CC54C227D2ECC50077337D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CC54C127D2ECC50077337D /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		858663F813E7A98C10692E78 /* Pods_KadaiChallenge2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KadaiChallenge2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9039064319658FD7E15DF77D /* Pods-KadaiChallenge2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KadaiChallenge2.release.xcconfig"; path = "Target Support Files/Pods-KadaiChallenge2/Pods-KadaiChallenge2.release.xcconfig"; sourceTree = "<group>"; };
+		9FF5E77BC9340EF4B63990F0 /* Pods-KadaiChallenge2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KadaiChallenge2.debug.xcconfig"; path = "Target Support Files/Pods-KadaiChallenge2/Pods-KadaiChallenge2.debug.xcconfig"; sourceTree = "<group>"; };
 		D3CC54BA27D2ECC50077337D /* KadaiChallenge2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KadaiChallenge2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3CC54BD27D2ECC50077337D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3CC54BF27D2ECC50077337D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				082DF278370B472FFDE910C0 /* Pods_KadaiChallenge2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D922A4BCF0E25D9FAD8B28C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				858663F813E7A98C10692E78 /* Pods_KadaiChallenge2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A322A50BA14A8E36FCF1FB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9FF5E77BC9340EF4B63990F0 /* Pods-KadaiChallenge2.debug.xcconfig */,
+				9039064319658FD7E15DF77D /* Pods-KadaiChallenge2.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D3CC54B127D2ECC50077337D = {
 			isa = PBXGroup;
 			children = (
 				D3CC54BC27D2ECC50077337D /* KadaiChallenge2 */,
 				D3CC54BB27D2ECC50077337D /* Products */,
+				7A322A50BA14A8E36FCF1FB6 /* Pods */,
+				4D922A4BCF0E25D9FAD8B28C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3CC54CE27D2ECC60077337D /* Build configuration list for PBXNativeTarget "KadaiChallenge2" */;
 			buildPhases = (
+				48C21C883FE0E93A32FF5480 /* [CP] Check Pods Manifest.lock */,
 				D3CC54B627D2ECC50077337D /* Sources */,
 				D3CC54B727D2ECC50077337D /* Frameworks */,
 				D3CC54B827D2ECC50077337D /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48C21C883FE0E93A32FF5480 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KadaiChallenge2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3CC54B627D2ECC50077337D /* Sources */ = {
@@ -284,11 +335,13 @@
 		};
 		D3CC54CF27D2ECC60077337D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FF5E77BC9340EF4B63990F0 /* Pods-KadaiChallenge2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9J6V4A6LZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KadaiChallenge2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -311,11 +364,13 @@
 		};
 		D3CC54D027D2ECC60077337D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9039064319658FD7E15DF77D /* Pods-KadaiChallenge2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9J6V4A6LZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KadaiChallenge2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
