@@ -14,39 +14,31 @@ class ViewController: UIViewController {
     @IBOutlet private weak var calculationSegmented: UISegmentedControl!
     @IBOutlet private weak var resultLabel: UILabel!
 
-    @IBAction func changeSelect(_ sender: Any) {
-    }
-
     @IBAction func calculationButton() {
-
-        let num = calculationSegmented.selectedSegmentIndex
 
         let firstValue = Float(firstText.text ?? "") ?? 0
         let secondValue = Float(secondText.text ?? "") ?? 0
 
-        if num == 0 {
-            let resultvalue = firstValue + secondValue
-            resultLabel.text = String(resultvalue)
+        let resultText: String
 
-        } else if num == 1 {
-            let resultvalue = firstValue - secondValue
-            resultLabel.text = String(resultvalue)
-
-        } else if num == 2 {
-            let resultvalue = firstValue * secondValue
-            resultLabel.text = String(resultvalue)
-
-        } else {
+        switch calculationSegmented.selectedSegmentIndex {
+        case 0:
+            resultText = String(firstValue + secondValue)
+        case 1:
+            resultText = String(firstValue - secondValue)
+        case 2:
+            resultText = String(firstValue * secondValue)
+        case 3:
             if secondValue == 0 {
-                resultLabel.text = "割る数には0以外を入力して下さい"
-
+                resultText = "割る数には0以外を入力して下さい"
             } else {
-
-            let resultvalue = firstValue / secondValue
-            resultLabel.text = String(resultvalue)
-
+                resultText = String(firstValue / secondValue)
             }
+        default:
+            fatalError("ここには到達し得ない")
         }
+
+        resultLabel.text = resultText
     }
 }
 

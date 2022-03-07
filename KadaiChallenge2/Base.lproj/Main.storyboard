@@ -37,9 +37,6 @@
                                             <segment title="×"/>
                                             <segment title="÷"/>
                                         </segments>
-                                        <connections>
-                                            <action selector="changeSelect:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hn3-GW-ABG"/>
-                                        </connections>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kbM-Vh-3Fd">
                                         <rect key="frame" x="0.0" y="159" width="382" height="31"/>
