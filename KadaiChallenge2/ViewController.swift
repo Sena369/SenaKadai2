@@ -14,9 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet private weak var calculationSegmented: UISegmentedControl!
     @IBOutlet private weak var resultLabel: UILabel!
 
-    @IBAction func changeSelect(_ sender: Any) {
-    }
-
     @IBAction func calculationButton() {
 
         let firstValue = Float(firstText.text ?? "") ?? 0
